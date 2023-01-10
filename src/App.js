@@ -6,12 +6,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import ApiSimpsons from './components/ApiSimpsons';
 import DetailList from './components/DetailList';
+import Context from './components/Context';
 
 function App() {
   return (
     <>
     
-    
+    <Context>
     <BrowserRouter>
     
     
@@ -27,8 +28,8 @@ function App() {
     
     
     </BrowserRouter>
-    
-    
+    </Context>
+         
     
     </>
   );

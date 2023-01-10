@@ -1,7 +1,11 @@
-import React from 'react';
-import {useEffect, useState} from 'react';
+import homerImg from "../img/homer-img.png"
+import {useContext, useEffect, useState} from 'react';
+import {useParams, Link } from 'react-router-dom';
+import { ContextApp } from './Context';
 import NavBar from './NavBar';
-import {useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+
 
 
     
@@ -10,13 +14,10 @@ import {useParams } from 'react-router-dom';
 
 const DetailList = () => {
     
+  const [findData, setFindData] = useState({});
+  const {counter, setCounter, addToCart, cart} = useContext(ContextApp);  
     
-    
-     const [findData, setFindData] = useState({});
-     const [counter, setCounter] = useState(0);
-
-     const { idSimpson } = useParams ();
-
+  const { idSimpson } = useParams ();     
     
     const getData = async () => {
         const resp = await fetch('https://api.sampleapis.com/simpsons/episodes');
@@ -42,9 +43,6 @@ const DetailList = () => {
      
 
 
-     
-     
-     
        const sumar = () =>{
         counter < 100  &&   setCounter(counter + 1 )
        }   
@@ -53,13 +51,34 @@ const DetailList = () => {
       
        counter > 0  &&  setCounter(counter - 1 )
        }   
+
+       
+       const addToCartBoton = (qty) =>{
+       
+        Swal.fire({
+          icon: 'success',
+          title: `Su capítulo: <strong><i>${findData.name}</strong></i>, se ha añadido correctamente al Carrito. ${counter} unidades.`,
+          
+        });
+
+       addToCart(findData, qty);
+       setCounter(0);
+
+
+       }
                
-    
+     console.log(cart);
     
     return (
         <>
          
          <NavBar/>
+
+         <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"65px" , width:"45px"}} alt="" /></Link>
+         <p className="text-xs ml-3">Haz click en Homero</p>
+         <p className="text-xs ml-3">para seguir con tu compra...</p>
+
+
          { findData == undefined ? <p>Loading...</p> :
           <>
           
@@ -79,7 +98,7 @@ const DetailList = () => {
              <strong><button className='btn-circle btn-accent btn-sm mr-10 text-white' onClick={restar}>-</button></strong>
              </div>
              <div className='text-center mt-4'>
-             <p className='bg-black text-white rounded-full inline p-2  w-fit hover: cursor-pointer'>AGREGAR AL CARRO</p>
+             <p className='bg-black text-white rounded-full inline p-2  w-fit hover: cursor-pointer' onClick={()=>addToCartBoton(counter)}>AGREGAR AL CARRO</p>
              </div>
 
 

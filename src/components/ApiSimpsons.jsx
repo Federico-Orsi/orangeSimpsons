@@ -1,27 +1,15 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useContext} from 'react';
 import NavBar from '../components/NavBar'; 
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import { ContextApp } from './Context';
 
-
+ 
 
  const ApiSimpsons = () => {
     
     
-    const [data, setData] = useState([]);
-    const [filterData, setFilterData] = useState([]);
-    
-    
-    
-    // const [refresh, setRefresh] = useState(0);
-    
-    const getData = async () => {
-    const resp = await fetch('https://api.sampleapis.com/simpsons/episodes');
-    const json = await resp.json();
-    const dataConPrecio = json.map(item =>{return {...item, Price:350, Qty: 100 }})
-    setData(dataConPrecio);
-  }
-
+  const {data, filterData, setFilterData, getData} = useContext(ContextApp);  
   
     
 

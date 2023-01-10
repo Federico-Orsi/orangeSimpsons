@@ -59,14 +59,20 @@ setCart([...cart])
   setCart(deleted)
  }
 
+ 
+ const badgeCounter = () =>{
+ 
+  const qtyCart = cart.map(elem => elem.qtyItem);
+  return qtyCart.reduce((a,b) => a + b, 0)  
 
+ }
 
 
 
     
     return (
         <>
-            <ContextApp.Provider value={{data, setData, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
+            <ContextApp.Provider value={{data, setData, badgeCounter, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
             {props.children}
 
             </ContextApp.Provider>

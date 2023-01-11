@@ -64,7 +64,7 @@ import { ContextApp } from './Context';
          <strong onClick={() =>filterSeason(3)}><h1 className='hover:cursor-pointer'>Temporada 3</h1></strong>
          </div>
 
-         <strong onClick={All}><h1 className='ml-20 bg-slate-900 text-white w-fit rounded-full p-4 hover:cursor-pointer'>ALL</h1></strong>
+         <strong onClick={All}><h1 className='max-[450px]:mb-5 max-[450px]:m-auto ml-20 bg-slate-900 text-white w-fit rounded-full p-4 hover:cursor-pointer'>ALL</h1></strong>
 
          
          

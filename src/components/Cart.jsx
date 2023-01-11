@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import {useContext, useState} from 'react';
 import { ContextApp } from './Context';
 import homerImg from "../img/homer-img.png"
+import Footer from './Footer';
 
 
 
@@ -102,6 +103,11 @@ const Cart = () => {
 
                
         </article>    
+
+
+        {
+             cart.length > 0  &&  <Footer/>
+        }
              
             
             

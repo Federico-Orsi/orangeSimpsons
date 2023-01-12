@@ -44,7 +44,7 @@ const Home = () => {
      <img src={hanniLogo} className="w-96 h-96"/>
      <img src={img3} className="max-[450px]:mb-3 w-96 h-96"/>
      </div>
-    <div className='max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-evenly mt-7'>
+    <div className='max-[450px]:justify-around max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-evenly mt-7'>
      <img src={img4} className="inline-block w-96 h-96"/>
      <img src={img5} className="inline-block w-96 h-96"/>
      <img src={img6} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
@@ -54,7 +54,7 @@ const Home = () => {
      <img src={img8} className="inline-block w-96 h-96"/>
      <img src={img9} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
      </div>
-     <div className='max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-evenly mt-7'>
+     <div className='max-[450px]:justify-around max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-evenly mt-7'>
      <img src={img10} className="inline-block w-96 h-96"/>
      <img src={img11} className="inline-block w-96 h-96"/>
      <img src={img12} className="max-[450px]:mb-3 inline-block w-96 h-96"/>

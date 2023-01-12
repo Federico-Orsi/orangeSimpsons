@@ -39,30 +39,30 @@ const Home = () => {
     </div>
     
     
-    <div className='flex justify-around mt-7 '>
+    <div className='max-[450px]:flex-col max-[450px]:ml-5 max-[450px]:gap-3  max-[450px]:m-auto flex justify-around mt-7 '>
      <img src={img1} className="w-96 h-96" />
      <img src={hanniLogo} className="w-96 h-96"/>
-     <img src={img3} className="w-96 h-96"/>
+     <img src={img3} className="max-[450px]:mb-3 w-96 h-96"/>
      </div>
-    <div className='flex justify-evenly mt-7'>
+    <div className='max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-5 max-[450px]:gap-3 flex justify-evenly mt-7'>
      <img src={img4} className="inline-block w-96 h-96"/>
      <img src={img5} className="inline-block w-96 h-96"/>
-     <img src={img6} className="inline-block w-96 h-96"/>
+     <img src={img6} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
      </div>
-     <div className='flex justify-around mt-7'>
+     <div className='max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-5 max-[450px]:gap-3 flex justify-around mt-7'>
      <img src={img7} className="inline-block w-96 h-96"/>
      <img src={img8} className="inline-block w-96 h-96"/>
-     <img src={img9} className="inline-block w-96 h-96"/>
+     <img src={img9} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
      </div>
-     <div className='flex justify-evenly mt-7'>
+     <div className='max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-5 max-[450px]:gap-3 flex justify-evenly mt-7'>
      <img src={img10} className="inline-block w-96 h-96"/>
      <img src={img11} className="inline-block w-96 h-96"/>
-     <img src={img12} className="inline-block w-96 h-96"/>
+     <img src={img12} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
      </div>
-     <div className='flex justify-around mt-7'>
+     <div className='max-[450px]:flex-col max-[450px]:ml-5 max-[450px]:gap-3 max-[450px]:m-auto flex justify-around mt-7'>
      <img src={img13} className="inline-block w-96 h-96"/>
      <img src={img14} className="inline-block w-96 h-96"/>
-     <img src={img15} className="inline-block w-96 h-96"/>
+     <img src={img15} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
      </div>
      <Footer/>
      </>

@@ -29,20 +29,24 @@ const NavBar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Identidad Visual</a></li>
+        <li><a>Marketing</a></li>
+        <li><a>Empresarial</a></li>
         <li tabIndex={0}>
         <a className=''>
           Editorial
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
         <ul className="p-2">
-          <li><a className=' '>Libros</a></li>
-          <li><a className='text-orange-600'>Folleteria</a></li>
-          <li><a>Papelería</a></li>
+          <li><a className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Libros</a></li>
+          <li><a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Folleteria</a></li>
+          <li><a className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Papelería</a></li>
+          
         </ul>
       </li>
-        <li>Marketing</li>
-        <li><a>Empresarial</a></li>
+        
+        
         <li><a>Deco</a></li>
+        <li><Link to="/Contacto">Contacto</Link></li>
       </ul>
     </div>
     {/* Secciones desde Tablet View */}

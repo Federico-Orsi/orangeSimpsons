@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-          <section style={{ height: '225px'}} className="max-[450px]:text-sm  flex justify-around bg-black text-white pt-7">
+          <section className="max-[450px]:text-sm max-[450px]:h-[350px] max-[450px]:pt-20 h-[225px] flex justify-around bg-black text-white pt-7">
        <div className="max-[450px]:w-[46%] mt-4">
        <h6 className="hoover">CONTACTO</h6>
        <p style={{ fontSize: 'small'}} className="mt-5">Av. Siempre Viva 2400 - CABA - Argentina </p>

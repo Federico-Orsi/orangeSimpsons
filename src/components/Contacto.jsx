@@ -17,7 +17,7 @@ const Contacto = () => {
         <>
         
         <article>
-  <img src={portadaOrange} style={{width: "100%"}} alt="" />
+  <img className="max-[450px]:h-[400px]" src={portadaOrange} style={{width: "100%"}} alt="" />
 </article>
 
 

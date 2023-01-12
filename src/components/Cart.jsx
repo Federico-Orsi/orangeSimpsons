@@ -44,9 +44,9 @@ const Cart = () => {
         <>
             <NavBar/>
            
-            <article className='flex justify-around'>
+            <article className='max-[450px]:flex-col-reverse flex justify-around'>
             
-            <div className='text-center'>
+            <div className='text-center mt-7'>
             {
              cart.length > 0  &&   <u><h1 className='mb-4 mt-1'>Detalle de tu Carrito:</h1> </u>  
             }
@@ -58,7 +58,7 @@ const Cart = () => {
                 
                 cart.map(elem => 
                     
-                    <div key={elem.id} className="text-center mb-3 border-solid border border-slate-800 w-fit"> 
+                    <div key={elem.id} className="max-[450px]:m-auto max-[450px]:mb-5 text-center mb-3 border-solid border border-slate-800 w-fit"> 
                     
                     <strong><h1>{elem.nameItem}</h1></strong>
                     <img src={elem.pictureItem} className="inline" alt="" />
@@ -85,7 +85,7 @@ const Cart = () => {
 
                 
                 
-                <div style={{height:"229px" , width:"500px", paddingLeft:""}} className="card card-side bg-base-100 shadow-xl w-fit mr-16 mt-8">
+                <div style={{height:"229px" , paddingLeft:""}} className="max-[450px]:w-[380px] max-[450px]:m-auto w-[500px] card card-side bg-base-100 shadow-xl mr-16 mt-8">
                 <figure><img src={homerImg} style={{height:"173px" , width:"90px", paddingLeft:"9%"}} alt="Movie"/></figure>
                 <div className="card-body">
                 <u><h2 className="card-title">Resumen de tu compra:</h2></u>

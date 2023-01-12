@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 const DetailList = () => {
     
   const [findData, setFindData] = useState({});
-  const {counter, setCounter, addToCart, cart} = useContext(ContextApp);  
+  const {counter, setCounter, addToCart, cart, setMjeEmptyCart} = useContext(ContextApp);  
     
   const { idSimpson } = useParams ();     
     
@@ -62,6 +62,7 @@ const DetailList = () => {
         });
 
        addToCart(findData, qty);
+       setMjeEmptyCart('Ya haz la maldita compra!!');
        setCounter(0);
 
 

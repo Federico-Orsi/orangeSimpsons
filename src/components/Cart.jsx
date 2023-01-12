@@ -8,9 +8,12 @@ import Footer from './Footer';
 
 
 
+
 const Cart = () => {
+
     
-    const {cart, deleteFromCart} = useContext(ContextApp); 
+    
+    const {cart, deleteFromCart, vaciarCarro, mjeEmptyCart} = useContext(ContextApp); 
     
     console.log(cart);
     
@@ -40,11 +43,12 @@ const Cart = () => {
     
     
     
+    
     return (
         <>
             <NavBar/>
            
-            <article className='max-[450px]:flex-col-reverse flex justify-around'>
+            <article  className='max-[450px]:flex-col-reverse flex justify-around'>
             
             <div className='text-center mt-7'>
             {
@@ -71,7 +75,7 @@ const Cart = () => {
                   </div>
                 
                ) : <div className='text-center mt-8'>
-                   <p>Ya haz la maldita compra!!</p>
+                   <p>{mjeEmptyCart}</p>
                 </div>
               
              }   
@@ -93,7 +97,7 @@ const Cart = () => {
                 <p>IVA (21%): ${calcularIva()}</p>
                 <p>Total a abonar: ${(calcularValorFinal().toFixed(2))}</p>
                 <div className="card-actions justify-end">
-                <button className="btn btn-accent text-white">Confirmar Orden</button>
+                <button className="btn btn-accent text-white" onClick={vaciarCarro}>Confirmar Orden</button>
                 </div>
                 </div>
                 </div>

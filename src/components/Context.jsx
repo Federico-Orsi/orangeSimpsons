@@ -1,7 +1,7 @@
 import React from 'react';
 import { createContext } from 'react';
 import { useState } from 'react';
-
+import Swal from 'sweetalert2';
 
 
 export const ContextApp = createContext();
@@ -12,12 +12,13 @@ export const ContextApp = createContext();
 
 const Context = (props) => {
     
-    
+  
     
     const [data, setData] = useState([]);
     const [filterData, setFilterData] = useState([]);
     const [cart, setCart] = useState([]);
     const [counter, setCounter] = useState(0);
+    const [mjeEmptyCart, setMjeEmptyCart] = useState('Ya haz la maldita compra!!');
 
     
     const getData = async () => {
@@ -68,11 +69,23 @@ setCart([...cart])
  }
 
 
+ const vaciarCarro = () => {
+  
+  Swal.fire({
+    icon: 'success',
+    title: `Muchas gracias por su Compra!!.`,
+    
+  });
+  setCart([])
+  setMjeEmptyCart("")
+}
+
+
 
     
     return (
         <>
-            <ContextApp.Provider value={{data, setData, badgeCounter, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
+            <ContextApp.Provider value={{data, setData, setMjeEmptyCart, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
             {props.children}
 
             </ContextApp.Provider>

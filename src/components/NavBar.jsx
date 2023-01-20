@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ContextApp } from './Context';
 import Badge from '@mui/material/Badge';
 import { useContext } from "react";
+import introGif from "../img/gifSimponsIntro.gif"
 
 
 
@@ -73,7 +74,7 @@ const NavBar = () => {
   </div>
   
 
-  <Link to="/" className="normal-case text-xl text-center hover:bg-white hover:cursor-pointer"><img className=' hover:bg-white w-80' src={orangeLogo} alt="" /></Link>
+  <Link to="/" className="normal-case text-xl text-center hover:bg-white hover:cursor-pointer"><img className=' hover:bg-white w-80' src={introGif} alt="" /></Link>
   {/* navbar End */}
 
   

@@ -19,12 +19,15 @@ import Footer from '../components/Footer';
 import homerImg from "../img/homer-img.png"
 import { Link } from 'react-router-dom';
 
+import introMp3 from "../img/television-simpsons.mp3"
+
 
 const Home = () => {
     return (
         <>
     <NavBar/>    
     
+    <audio src={introMp3} controls className='w-[28%] m-auto mt-10' ></audio>
     
     
     <div className='flex justify-between mt-10 mr-20'>
@@ -37,6 +40,11 @@ const Home = () => {
     <p className='text-center robotoStrong'>Convertimos tus ideas en Realidad!!</p>
     <p className='mt-10 roboto'>Especializándonos en<span className='robotoStrong'> branding, comunicación </span> y <span className='robotoStrong'>diseño</span> de proyectos digitales, construimos soluciones visuales, que agregan valor a empresas, productos y servicios.</p>
     </div>
+    
+    
+    
+
+    
     
     
     <div className='max-[450px]:flex-col max-[450px]:ml-3 max-[450px]:gap-3  max-[450px]:m-auto flex justify-around mt-7 '>

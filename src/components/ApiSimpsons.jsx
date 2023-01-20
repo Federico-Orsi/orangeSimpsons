@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { ContextApp } from './Context';
-
+import introMp3 from "../img/television-simpsons.mp3"
  
 
  const ApiSimpsons = () => {
@@ -63,6 +63,8 @@ import { ContextApp } from './Context';
          <h1 className='hover:cursor-pointer' onClick={() =>filterSeason(2)}><strong>Temporada 2</strong></h1>
          <strong onClick={() =>filterSeason(3)}><h1 className='hover:cursor-pointer'>Temporada 3</h1></strong>
          </div>
+
+         <audio src={introMp3} controls className='w-[28%] mt-10' ></audio>
 
          <strong onClick={All}><h1 className='max-[450px]:mb-5 max-[450px]:m-auto ml-20 bg-slate-900 text-white w-fit rounded-full p-4 hover:cursor-pointer'>ALL</h1></strong>
 

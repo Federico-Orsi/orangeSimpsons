@@ -4,7 +4,7 @@ import {useParams, Link } from 'react-router-dom';
 import { ContextApp } from './Context';
 import NavBar from './NavBar';
 import Swal from 'sweetalert2';
-
+import axios from 'axios';
 
 
 
@@ -20,9 +20,15 @@ const DetailList = () => {
   const { idSimpson } = useParams ();     
     
     const getData = async () => {
-        const resp = await fetch('https://api.sampleapis.com/simpsons/episodes');
-        const json = await resp.json();
-        const dataConPrecio = json.map(item =>{return {...item, Price:350, Qty: 100 }})
+        const resp = await axios.get('https://api.sampleapis.com/simpsons/episodes');
+        // Here on the second parameter of this axios.get function it should be placed this object with the required "q" params (query params), as it was described on the assessment.
+      // { 
+      //   params: {
+      //    q: "q"
+      //   }
+      // }
+
+        const dataConPrecio = resp.data.map(item =>{return {...item, Price:350, Qty: 100 }})
         const findChapter = dataConPrecio.find(apu => apu.id == idSimpson);
         setFindData(findChapter);
       }
@@ -62,7 +68,7 @@ const DetailList = () => {
         });
 
        addToCart(findData, qty);
-       setMjeEmptyCart('Ya haz la maldita compra!!');
+       setMjeEmptyCart('Ya haz la maldita compra Flanderrrssssssss!! ');
        setCounter(0);
 
 

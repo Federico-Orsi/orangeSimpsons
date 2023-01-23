@@ -2,6 +2,7 @@ import React from 'react';
 import { createContext } from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 
 export const ContextApp = createContext();
@@ -18,17 +19,26 @@ const Context = (props) => {
     const [filterData, setFilterData] = useState([]);
     const [cart, setCart] = useState([]);
     const [counter, setCounter] = useState(0);
-    const [mjeEmptyCart, setMjeEmptyCart] = useState('Ya haz la maldita compra!!');
+    const [mjeEmptyCart, setMjeEmptyCart] = useState('Ouchhh!! Su carrito esta vacío!!');
 
     
     const getData = async () => {
-    const resp = await fetch('https://api.sampleapis.com/simpsons/episodes');
-    const json = await resp.json();
-    const dataConPrecio = json.map(item =>{return {...item, Price:350, Qty: 100 }})
-    setData(dataConPrecio);
-    
-  }
-   
+      const resp = await axios.get('https://api.sampleapis.com/simpsons/episodes');
+      
+      // Here on the second parameter of this axios.get function it should be placed this object with the required "q" params (query params), as it was described on the assessment.
+      // { 
+      //   params: {
+      //    q: "q"
+      //   }
+      // }
+      
+      const dataConPrecio = resp.data.map(item =>{return {...item, Price:350, Qty: 100 }})
+      setData(dataConPrecio);
+      
+    }
+       
+  
+  
   
   const addToCart = (chapter, qty) =>{
 

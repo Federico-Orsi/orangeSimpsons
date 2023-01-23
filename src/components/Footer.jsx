@@ -7,8 +7,8 @@ const Footer = () => {
           <section className="max-[450px]:text-sm h-[225px] flex justify-around bg-black text-white pt-7">
        <div className="max-[450px]:w-[46%] mt-4">
        <h6 className="hoover">CONTACTO</h6>
-       <p style={{ fontSize: 'small'}} className="mt-5">Av. Siempre Viva 2400 - CABA - Argentina </p>
-       <p style={{ fontSize: 'small'}} className="hoover mt-2 mb-2" >info@orange-designstudio.com</p>
+       <p style={{ fontSize: 'small'}} className="mt-5">Av. Siempre Viva 2400 - Springfield - USA </p>
+       <p style={{ fontSize: 'small'}} className="hoover mt-2 mb-2" >homer@simpsonsfamily.com</p>
        <div style={{ fontSize: 'small'}}>
        <span>011 4829-3698</span>
        <span className="ml-3">Lunes a Viernes - 9 a 18hs</span>

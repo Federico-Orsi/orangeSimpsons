@@ -64,7 +64,7 @@ import introMp3 from "../img/television-simpsons.mp3"
          <strong onClick={() =>filterSeason(3)}><h1 className='hover:cursor-pointer'>Temporada 3</h1></strong>
          </div>
 
-         <audio src={introMp3} controls className='w-[28%] mt-10' ></audio>
+         <audio src={introMp3} controls className='max-[450px]:mb-4  w-[28%] mt-10 m-auto' ></audio>
 
          <strong onClick={All}><h1 className='max-[450px]:mb-5 max-[450px]:m-auto ml-20 bg-slate-900 text-white w-fit rounded-full p-4 hover:cursor-pointer'>ALL</h1></strong>
 
@@ -75,9 +75,9 @@ import introMp3 from "../img/television-simpsons.mp3"
              
              
              filterData.map(homer =>  <>
-             <div className='text-center inline'>
+             <div key={homer.id} className='text-center inline'>
               <div className='w-56 mb-7 border-solid border border-slate-800 pb-4 m-auto'>
-              <h1 key={homer.id}>{homer.name}</h1>
+              <h1>{homer.name}</h1>
               
               <img className='inline' src={homer.thumbnailUrl} alt="" />
               <p className='w'>{homer.description}</p>
@@ -96,9 +96,9 @@ import introMp3 from "../img/television-simpsons.mp3"
             
             : 
              data.map(homer => <>
-              <div className='text-center inline'>
+              <div key={homer.id} className='text-center inline'>
               <div className='w-56 mb-7 border-solid border border-slate-800 pb-4 m-auto'>
-              <h1 key={homer.id}>{homer.name}</h1>
+              <h1>{homer.name}</h1>
               
               <img className='inline' src={homer.thumbnailUrl} alt="" />
               <p className='w'>{homer.description}</p>

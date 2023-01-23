@@ -85,8 +85,8 @@ const DetailList = () => {
          <article className="max-[450px]:flex-col-reverse max-[450px]:ml-auto max-[450px]:mt-10  flex justify-center">
          <div className="max-[450px]:m-auto max-[450px]:mt-10 mr-64">
          <Link to="/Simpsons"><img src={homerImg} className='max-[450px]:ml-[30%] max-[450px]:h-[92px] max-[450px]:w-[60px] inline ml-10  mt-3 hover:cursor-pointer w-[45px] h-[65px]'/></Link>
-         <p className="max-[450px]:text-sm text-xs ml-3">Haz click en Homero</p>
-         <p className="max-[450px]:text-sm text-xs ml-3">para seguir con tu compra...</p>
+         <p className="max-[450px]:text-sm text-xs ml-3">Click on Homer</p>
+         <p className="max-[450px]:text-sm text-xs ml-3">to continue your shopping...</p>
          </div>
 
          { findData == undefined ? <p>Loading...</p> :
@@ -95,7 +95,7 @@ const DetailList = () => {
             <div className='text-center'>
                 <h1>{findData.name}</h1>
                 <div className='text-center'>
-                <img className='max-[450px]:w-[280px] inline' src={findData.thumbnailUrl} alt="" />
+                <img className='max-[450px]:w-[280px] inline' src={findData.thumbnailUrl ?? ""} alt="" />
                 </div>
                 <p>Capítulo ID: {findData.id}</p>   
              </div>
@@ -108,7 +108,7 @@ const DetailList = () => {
              <strong><button className='btn-circle btn-accent btn-sm mr-10 text-white' onClick={restar}>-</button></strong>
              </div>
              <div className='text-center mt-4'>
-             <p className='bg-black text-white rounded-full inline p-2  w-fit hover: cursor-pointer' onClick={()=>addToCartBoton(counter)}>AGREGAR AL CARRO</p>
+             <p className='bg-black text-white rounded-full inline p-2  w-fit hover:cursor-pointer hover:text-yellow-300' onClick={()=>addToCartBoton(counter)}>ADD TO CART</p>
              </div>
 
              </section>

@@ -79,7 +79,7 @@ import introMp3 from "../img/television-simpsons.mp3"
               <div className='w-56 mb-7 border-solid border border-slate-800 pb-4 m-auto'>
               <h1>{homer.name}</h1>
               
-              <img className='inline' src={homer.thumbnailUrl} alt="" />
+              <img className='inline' src={homer.thumbnailUrl ?? ""} alt="" />
               <p className='w'>{homer.description}</p>
               
               <div className='flex bg-slate-800'>
@@ -100,7 +100,7 @@ import introMp3 from "../img/television-simpsons.mp3"
               <div className='w-56 mb-7 border-solid border border-slate-800 pb-4 m-auto'>
               <h1>{homer.name}</h1>
               
-              <img className='inline' src={homer.thumbnailUrl} alt="" />
+              <img className='inline' src={homer.thumbnailUrl ?? ""} alt="" />
               <p className='w'>{homer.description}</p>
               
               <div className='flex bg-slate-800'>

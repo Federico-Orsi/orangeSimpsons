@@ -47,7 +47,7 @@ const Home = () => {
     <div className='flex justify-between mt-10 mr-20'> 
     <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"65px" , width:"45px"}} alt="" /></Link>
     <div className='mt-6'>
-    <a className='bg-black text-white rounded-full p-4' href={FedeCV} download={""}>Developer CV</a>
+    <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>Developer CV</a>
     </div>
     </div>
     <div className='p-14'>

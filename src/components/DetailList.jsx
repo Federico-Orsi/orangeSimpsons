@@ -20,7 +20,9 @@ const DetailList = () => {
   const { idSimpson } = useParams ();     
     
     const getData = async () => {
-        const resp = await axios.get('https://api.sampleapis.com/simpsons/episodes');
+        
+      try{
+      const resp = await axios.get('https://api.sampleapis.com/simpsons/episodes');
         // Here on the second parameter of this axios.get function it should be placed this object with the required "q" params (query params), as it was described on the assessment.
       // { 
       //   params: {
@@ -32,7 +34,10 @@ const DetailList = () => {
         const findChapter = dataConPrecio.find(apu => apu.id == idSimpson);
         setFindData(findChapter);
       }
-    
+        catch(error){
+        console.log(error);
+    }
+  }
       
         
     
@@ -95,7 +100,7 @@ const DetailList = () => {
             <div className='text-center'>
                 <h1>{findData.name}</h1>
                 <div className='text-center'>
-                <img className='max-[450px]:w-[280px] inline' src={findData.thumbnailUrl ?? ""} alt="" />
+                <img className='max-[450px]:w-[280px] inline' src={findData.thumbnailUrl || ""} alt="" />
                 </div>
                 <p>Capítulo ID: {findData.id}</p>   
              </div>

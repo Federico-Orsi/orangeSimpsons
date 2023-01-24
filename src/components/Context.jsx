@@ -23,6 +23,8 @@ const Context = (props) => {
 
     
     const getData = async () => {
+     
+      try{ 
       const resp = await axios.get('https://api.sampleapis.com/simpsons/episodes');
       
       // Here on the second parameter of this axios.get function it should be placed this object with the required "q" params (query params), as it was described on the assessment.
@@ -34,6 +36,9 @@ const Context = (props) => {
       
       const dataConPrecio = resp.data.map(item =>{return {...item, Price:350, Qty: 100 }})
       setData(dataConPrecio);
+     } catch (error){
+        console.log(error);
+     }
       
     }
        

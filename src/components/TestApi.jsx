@@ -12,7 +12,7 @@ import NavBar from './NavBar';
   const [img, setImg] = useState();
   const [img2, setImg2] = useState();
   const [page, setPage] = useState(9);
-  const [posterSimp, setPosterSimp] = useState();
+  
   
   
   

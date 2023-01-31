@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect } from 'react'; 
 import axios from 'axios';
 import homerImg from "../img/homer-img.png";
 import { Link } from 'react-router-dom';
@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Movie = () => {
     
+    
     const getMovie = async () =>{
+
+        
 
         const resp = await axios.get(`https://api.themoviedb.org/3/movie/35-the-simpsons-movie`, {
       
@@ -16,10 +19,7 @@ const Movie = () => {
         }
       })
        console.log(resp)
-       const poster = resp.data.poster_path
-       setPosterSimp(poster);
-       console.log(posterSimp);
-      
+       
       }
        
        

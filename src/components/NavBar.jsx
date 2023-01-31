@@ -31,7 +31,7 @@ const NavBar = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Episodes</a></li>
         {/* <li><a>Marketing</a></li> */}
-        <li><a>Game</a></li>
+        <li><Link to="/Movie">Movie</Link></li>
         <li tabIndex={0}>
         <a className=''>
         Characters
@@ -61,7 +61,7 @@ const NavBar = () => {
         </a>
         <ul className="p-2">
           <li><a className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</a></li>
-          <li><a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</a></li>
+          <li> <a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</a></li>
           <li><a className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</a></li>
         </ul>
       </li>
@@ -83,7 +83,7 @@ const NavBar = () => {
   
   <div className="hidden md:flex mr-20">
     <ul className="menu menu-horizontal px-1">
-    <li><a className=''>Game</a></li>
+    <li><Link to="/Movie">Movie</Link></li>
       {/* <li><a className=''>Deco</a></li> */}
       <li><Link to="/Contacto">Contact</Link></li>
     </ul>

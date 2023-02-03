@@ -30,6 +30,8 @@ import barnyLeniCarl from "../img/Simpsons/barnyLeniCarl.jpg"
 import Apu from "../img/Simpsons/Apu.png"
 import ComicNerd from "../img/Simpsons/comicsNerd.jpg"
 import BenderMoes from "../img/Simpsons/BenderMoes.jpg"
+import { useContext } from "react";
+import { ContextApp } from './Context';
 
 
 
@@ -37,6 +39,10 @@ import BenderMoes from "../img/Simpsons/BenderMoes.jpg"
 
 
 const Home = () => {
+    
+    
+    const {language} = useContext(ContextApp); 
+    
     return (
         <>
     <NavBar/>    
@@ -47,13 +53,13 @@ const Home = () => {
     <div className='flex justify-between mt-10 mr-20'> 
     <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"65px" , width:"45px"}} alt="" /></Link>
     <div className='mt-6'>
-    <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>Developer CV</a>
+    <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>
     </div>
     </div>
     <div className='p-14'>
-    <p className='text-center robotoStrong'>Welcome to your Simpsons App!!</p>
+    <p className='text-center robotoStrong'>{language == true? "Welcome to your Simpsons App!!": "Bienvenido a tu App de los Simpsons!!"}</p>
     {/* <p className='mt-10 roboto'>Especializándonos en<span className='robotoStrong'> branding, comunicación </span> y <span className='robotoStrong'>diseño</span> de proyectos digitales, construimos soluciones visuales, que agregan valor a empresas, productos y servicios.</p> */}
-    <p className='m-auto text-center mt-4'>Make click on Homer's Avatar and start your Site Tour... Let's Goo!!</p>
+    <p className='m-auto text-center mt-4'>{language == true? "Make click on Homer's Avatar and start your Site Tour... Let's Goo!!": "Haz click en Homero y comienza tu recorrido por el Sitio... Vamos!!"}</p>
     </div>
     
     

@@ -15,7 +15,7 @@ import axios from 'axios';
 const DetailList = () => {
     
   const [findData, setFindData] = useState({});
-  const {counter, setCounter, addToCart, cart, setMjeEmptyCart} = useContext(ContextApp);  
+  const {counter, setCounter, addToCart, cart, setMjeEmptyCart, setMjeCartVacio, language} = useContext(ContextApp);  
     
   const { idSimpson } = useParams ();     
     
@@ -66,14 +66,28 @@ const DetailList = () => {
        
        const addToCartBoton = (qty) =>{
        
+        {language == true? 
+          Swal.fire({
+          icon: 'success',
+          
+          title: `Your Chapter: <strong><i>${findData.name}</strong></i>, has been succesfully added to your Cart. ${counter} units.`,
+          
+        }) : 
+        
         Swal.fire({
           icon: 'success',
+          
           title: `Su capítulo: <strong><i>${findData.name}</strong></i>, se ha añadido correctamente al Carrito. ${counter} unidades.`,
           
-        });
+        });}
+
+        
 
        addToCart(findData, qty);
-       setMjeEmptyCart('Ya haz la maldita compra Flanderrrssssssss!! ');
+
+       setMjeEmptyCart('Come on Flanderrrssssssss Confirm the Order!! ');
+       setMjeCartVacio('Ya haz la maldita compra Flanderrrssssssss!! ');
+       
        setCounter(0);
 
 
@@ -90,11 +104,11 @@ const DetailList = () => {
          <article className="max-[450px]:flex-col-reverse max-[450px]:ml-auto max-[450px]:mt-10  flex justify-center">
          <div className="max-[450px]:m-auto max-[450px]:mt-10 mr-64">
          <Link to="/Simpsons"><img src={homerImg} className='max-[450px]:ml-[30%] max-[450px]:h-[92px] max-[450px]:w-[60px] inline ml-10  mt-3 hover:cursor-pointer w-[45px] h-[65px]'/></Link>
-         <p className="max-[450px]:text-sm text-xs ml-3">Click on Homer</p>
-         <p className="max-[450px]:text-sm text-xs ml-3">to continue your shopping...</p>
+         <p className="max-[450px]:text-sm text-xs ml-3">{language == true? "Click on Homer": "Haz click en Homero"}</p>
+         <p className="max-[450px]:text-sm text-xs ml-3">{language == true? "to continue your shopping...": "para continuar tu compra..."}</p>
          </div>
 
-         { findData == undefined ? <p>Loading...</p> :
+         { findData == undefined ? <p>{language == true? "Loading...": "Cargando..."}</p> :
           <>
            <section className="max-[450px]:mb-20 max-[450px]:m-auto mr-[405px] mt-5">
             <div className='text-center'>
@@ -102,7 +116,7 @@ const DetailList = () => {
                 <div className='text-center'>
                 <img className='max-[450px]:w-[280px] inline' src={findData.thumbnailUrl || ""} alt="" />
                 </div>
-                <p>Capítulo ID: {findData.id}</p>   
+                <p>{language == true? "Chapter ID:": "Cápitulo ID:"} {findData.id}</p>   
              </div>
 
             
@@ -113,7 +127,7 @@ const DetailList = () => {
              <strong><button className='btn-circle btn-accent btn-sm mr-10 text-white' onClick={restar}>-</button></strong>
              </div>
              <div className='text-center mt-4'>
-             <p className='bg-black text-white rounded-full inline p-2  w-fit hover:cursor-pointer hover:text-yellow-300' onClick={()=>addToCartBoton(counter)}>ADD TO CART</p>
+             <p className='bg-black text-white rounded-full inline p-2  w-fit hover:cursor-pointer hover:text-yellow-300' onClick={()=>addToCartBoton(counter)}>{language == true? "ADD TO CART": "AGREGAR AL CARRO"}</p>
              </div>
 
              </section>

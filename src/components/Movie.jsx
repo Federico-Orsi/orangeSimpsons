@@ -2,14 +2,16 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import homerImg from "../img/homer-img.png";
 import { Link } from 'react-router-dom';
-
+import {useContext} from 'react';
+import { ContextApp } from './Context';
 
 const Movie = () => {
     
+    const {language} = useContext(ContextApp); 
+
     
     const getMovie = async () =>{
 
-        
 
         const resp = await axios.get(`https://api.themoviedb.org/3/movie/35-the-simpsons-movie`, {
       
@@ -41,9 +43,9 @@ const Movie = () => {
           <section className='flex justify-center'>
           <div className='max-[450px]:mr-6 mr-12'>
           <Link to="/"><img src={homerImg} className='max-[450px]:mt-10 max-[450px]:height-[500px]  inline mt-20 hover:cursor-pointer ml-11' onClick={() => window.scrollTo({top:0 , behavior: "smooth"})} style={{height:"65px" , width:"45px"}} alt="" /></Link>
-          <p className='max-[450px]:mb-0 mb-20 text-sm'>Click me back to Home...</p>
+          <p className='max-[450px]:mb-0 mb-20 text-sm'>{language == true? "Click me back to Home...": "Click para volver al Home..."}</p>
           </div>
-          <button className='max-[450px]:mb-14 max-[450px]:mt-12 max-[450px]:ml-0 btn-lg mt-20 ml-12 mb-20 rounded-full text-white hover:text-yellow-300 bg-black'><a className='p-2 m-auto' href="https://www.imdb.com/title/tt0462538/?ref_=ttvi_tt" target="_blank">Watch Trailer</a></button>
+          <button className='max-[450px]:mb-14 max-[450px]:mt-12 max-[450px]:ml-0 btn-lg mt-20 ml-12 mb-20 rounded-full text-white hover:text-yellow-300 bg-black'><a className='p-2 m-auto' href="https://www.imdb.com/title/tt0462538/?ref_=ttvi_tt" target="_blank">{language == true? "Watch Trailer": "Ver Trailer"}</a></button>
           
           </section>
           <img className='m-auto' src="https://image.tmdb.org/t/p/w500/8ln5VUVk7gnNGIb2VNgw8nICDVt.jpg" alt="" />

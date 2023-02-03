@@ -19,8 +19,11 @@ const Context = (props) => {
     const [filterData, setFilterData] = useState([]);
     const [cart, setCart] = useState([]);
     const [counter, setCounter] = useState(0);
-    const [mjeEmptyCart, setMjeEmptyCart] = useState('Ouchhh!! Su carrito esta vacío!!');
-
+    const [language, setLanguage] = useState(false);
+    const [mjeEmptyCart, setMjeEmptyCart] = useState('Ouchhh!! Your Cart is Empty!!');
+    const [mjeCartVacio, setMjeCartVacio] = useState('Ouchhh!! Su carrito esta vacío!!');
+    
+    
     
     const getData = async () => {
      
@@ -86,11 +89,19 @@ setCart([...cart])
 
  const vaciarCarro = () => {
   
-  Swal.fire({
+  {language == true? 
+    Swal.fire({
+      icon: 'success',
+      title: `Thank you very much for your Shopping!!.`,
+      
+    })
+  :Swal.fire({
     icon: 'success',
     title: `Muchas gracias por su Compra!!.`,
     
-  });
+  })
+} 
+  
   setCart([])
   setMjeEmptyCart("")
 }
@@ -100,7 +111,7 @@ setCart([...cart])
     
     return (
         <>
-            <ContextApp.Provider value={{data, setData, setMjeEmptyCart, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
+            <ContextApp.Provider value={{data, setData, mjeCartVacio, setMjeCartVacio, setMjeEmptyCart, language, setLanguage, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
             {props.children}
 
             </ContextApp.Provider>

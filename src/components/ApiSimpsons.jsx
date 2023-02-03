@@ -9,7 +9,7 @@ import introMp3 from "../img/television-simpsons.mp3"
  const ApiSimpsons = () => {
     
     
-  const {data, filterData, setFilterData, getData} = useContext(ContextApp);  
+  const {data, filterData, setFilterData, getData, language} = useContext(ContextApp);  
   
     
 
@@ -59,14 +59,14 @@ import introMp3 from "../img/television-simpsons.mp3"
        
          <NavBar/>
          <div className='flex justify-around mb-7'>
-         <button onClick={() =>filterSeason(1)}><strong>Temporada 1</strong></button>
-         <h1 className='hover:cursor-pointer' onClick={() =>filterSeason(2)}><strong>Temporada 2</strong></h1>
-         <strong onClick={() =>filterSeason(3)}><h1 className='hover:cursor-pointer'>Temporada 3</h1></strong>
+         <button onClick={() =>filterSeason(1)}><strong>{language == true? "Season 1": "Temporada 1"}</strong></button>
+         <h1 className='hover:cursor-pointer' onClick={() =>filterSeason(2)}><strong>{language == true? "Season 2": "Temporada 2"}</strong></h1>
+         <strong onClick={() =>filterSeason(3)}><h1 className='hover:cursor-pointer'>{language == true? "Season 3": "Temporada 3"}</h1></strong>
          </div>
 
          <audio src={introMp3} controls className='max-[450px]:mb-4  w-[28%] mt-10 m-auto' ></audio>
 
-         <strong onClick={All}><h1 className='max-[450px]:mb-5 max-[450px]:m-auto ml-20 bg-slate-900 text-white w-fit rounded-full p-4 hover:cursor-pointer'>ALL</h1></strong>
+         <strong onClick={All}><h1 className='max-[450px]:mb-5 max-[450px]:m-auto ml-20 bg-slate-900 text-white w-fit rounded-full p-4 hover:cursor-pointer'>{language == true? "ALL": "TODOS"}</h1></strong>
 
          
          
@@ -83,11 +83,11 @@ import introMp3 from "../img/television-simpsons.mp3"
               <p className='w'>{homer.description}</p>
               
               <div className='flex bg-slate-800'>
-              <h1 className=' bg-slate-800 text-white inline ml-8'>Episodio Nro {homer.episode}</h1>
-              <p className=' bg-slate-800 text-white ml-4'>${homer.Price}</p>
+              <h1 className=' bg-slate-800 text-white inline ml-7'>{language == true? "Episode N° ": "Episodio Nro "} {homer.episode}<span className='ml-3'>-</span></h1>
+              <p className=' bg-slate-800 text-white ml-3'>${homer.Price}</p>
               </div>
-              <h3 className=' bg-orange-900 text-white pb-1'>Temporada {homer.season}</h3><strong><p>Stock: {homer.Qty} unidades</p></strong>
-              <Link to={`/DetailList/${homer.id}`}><strong><button className='rounded-full btn-accent p-3 text-white mt-2' >Ver Detalle</button></strong></Link>
+              <h3 className=' bg-orange-900 text-white pb-1'>{language == true? "Season": "Temporada"} {homer.season}</h3><strong><p>Stock: {homer.Qty} {language == true? "units": "unidades"}</p></strong>
+              <Link to={`/DetailList/${homer.id}`}><strong><button className='rounded-full btn-accent p-3 text-white mt-2' >{language == true? "Show Detail": "Ver Detalle"}</button></strong></Link>
               </div>
               </div>
 
@@ -104,11 +104,11 @@ import introMp3 from "../img/television-simpsons.mp3"
               <p className='w'>{homer.description}</p>
               
               <div className='flex bg-slate-800'>
-              <h1 className=' bg-slate-800 text-white inline ml-8'>Episodio Nro {homer.episode}</h1>
-              <p className=' bg-slate-800 text-white ml-4'>${homer.Price}</p>
+              <h1 className=' bg-slate-800 text-white inline ml-7'>{language == true? "Episode N°": "Episodio Nro"} {homer.episode}<span className='ml-3'>-</span></h1>
+              <p className=' bg-slate-800 text-white ml-3'>${homer.Price}</p>
               </div>
-              <h3 className=' bg-orange-900 text-white pb-1'>Temporada {homer.season}</h3><strong><p>Stock: {homer.Qty} unidades</p></strong>
-              <Link to={`/DetailList/${homer.id}`}><strong><button className='rounded-full btn-accent p-3 text-white mt-2' >Ver Detalle</button></strong></Link>
+              <h3 className=' bg-orange-900 text-white pb-1'>{language == true? "Season": "Temporada"} {homer.season}</h3><strong><p>Stock: {homer.Qty} {language == true? "units": "unidades"}</p></strong>
+              <Link to={`/DetailList/${homer.id}`}><strong><button className='rounded-full btn-accent p-3 text-white mt-2' >{language == true? "Show Detail": "Ver Detalle"}</button></strong></Link>
               </div>
               </div>
 

@@ -4,24 +4,37 @@ import { Link } from 'react-router-dom';
 import { ContextApp } from './Context';
 import Badge from '@mui/material/Badge';
 import { useContext } from "react";
-import introGif from "../img/gifSimponsIntro.gif"
-
-
-
+import introGif from "../img/gifSimponsIntro.gif";
+import spain from "../img/spain2.jpg";
+import USA from "../img/usa2.jpg";
 
 
 
 
 const NavBar = () => {
     
-  const {badgeCounter} = useContext(ContextApp); 
+  const {cart, badgeCounter, language, setLanguage, setMjeEmptyCart} = useContext(ContextApp); 
+  
+  
+
+  const changeToSpain = () =>{
+
+    setLanguage(false);
+
+  }
+
+  const changeToUsa = () =>{
+
+    setLanguage(true);
+
+  }
   
   
   return (
         <>
       
 
-<div className="navbar bg-base-100 border-solid border-b border-b-orange-300">
+<div className="navbar bg-base-100 border-solid border-b border-b-orange-300 relative">
   <div className="navbar-start">
     {/* Secciones desde Mobile View */}
     <div className="dropdown">
@@ -29,12 +42,12 @@ const NavBar = () => {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Episodes</a></li>
-        {/* <li><a>Marketing</a></li> */}
-        <li><Link to="/Movie">Movie</Link></li>
+        
+        
+        <li><Link to="/Movie">{language == true? "Movie": "Película"}</Link></li>
         <li tabIndex={0}>
         <a className=''>
-        Characters
+        {language == true? "Characters": "Personajes"}
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
         <ul className="p-2">
@@ -45,18 +58,19 @@ const NavBar = () => {
         </ul>
       </li>
         
-        
-        {/* <li><a>Deco</a></li> */}
-        <li><Link to="/Contacto">Contact</Link></li>
+        <li><Link to="/Contacto">{language == true? "Contact": "Contacto"}</Link></li>
       </ul>
     </div>
-    {/* Secciones desde Tablet View */}
+    {/* Secciones desde Tablet View ------------------------------------------*/}
   <div className="hidden md:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a className='hover:text-amber-300 hover:bg-slate-600'>Episodes</a></li>
-      <li tabIndex={0}>
+      
+      <li className='ml-12'><Link to="/Movie">{language == true? "Movie": "Película"}</Link></li>
+     
+      <li tabIndex={0} className='ml-10'>
+      
         <a className='hover:text-amber-200 hover:bg-slate-400'>
-          Characters
+        {language == true? "Characters": "Personajes"}
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
         <ul className="p-2">
@@ -66,7 +80,7 @@ const NavBar = () => {
         </ul>
       </li>
       
-      {/* <li><Link className='hover:text-amber-400'>Marketing</Link></li> */}
+      
       
     </ul>
   </div>
@@ -81,11 +95,11 @@ const NavBar = () => {
   
   <div className="navbar-end">
   
-  <div className="hidden md:flex mr-20">
+  <div className="max-[450px]:relative hidden md:flex mr-20">
+  <img onClick={changeToUsa} className='max-[450px]:absolute hover:cursor-pointer h-[43px] mt-1 mr-8' src={USA} alt="" />
+  <img onClick={changeToSpain} className='max-[450px]:absolute hover:cursor-pointer h-[51px] mr-8' src={spain} alt="" />
     <ul className="menu menu-horizontal px-1">
-    <li><Link to="/Movie">Movie</Link></li>
-      {/* <li><a className=''>Deco</a></li> */}
-      <li><Link to="/Contacto">Contact</Link></li>
+      <li><Link to="/Contacto">{language == true? "Contact": "Contacto"}</Link></li>
     </ul>
   </div>
 
@@ -102,6 +116,11 @@ const NavBar = () => {
     </Link>
   </div>
 </div>
+
+
+  <img onClick={changeToUsa} className='max-[450px]:absolute max-[450px]:top-[95px] max-[450px]:right-[39px] hover:cursor-pointer h-[38px] min-[450px]:hidden ' src={USA} alt="" />
+  <img onClick={changeToSpain} className='max-[450px]:absolute max-[450px]:top-[10px] max-[450px]:right-[35px]   hover:cursor-pointer h-[45px] min-[450px]:hidden  ' src={spain} alt="" />
+
             
 
 

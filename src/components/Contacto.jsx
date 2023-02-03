@@ -5,6 +5,9 @@ import Footer from '../components/Footer';
 import simpsonsHouse from "../img/simpsonsHouse.jpg"
 import introGif from "../img/gifSimponsIntro.gif"
 import homerImg from "../img/homer-img.png"
+import { ContextApp } from './Context';
+import { useContext } from "react";
+
 
 
 const Contacto = () => {
@@ -13,7 +16,7 @@ const Contacto = () => {
     window.scrollTo({top:0 , behavior: "smooth"});
  }  
     
-
+ const {language} = useContext(ContextApp); 
  
     
     return (
@@ -27,7 +30,7 @@ const Contacto = () => {
 
 <div className="text-center mt-5 mb-5">
 <Link to="/"><img style={{height: "78px"}} className="inline" src={homerImg} onClick={goToTop} /></Link>
-<p>Click me...</p>
+<p>{language == true? "Click me...": "Clickeame..."}</p>
 </div>
 
 

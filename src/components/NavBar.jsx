@@ -103,7 +103,7 @@ const NavBar = () => {
     </ul>
   </div>
 
-  <Link to="/Cart"><button className="btn btn-ghost btn-circle">
+  <Link to="/Cart"><button className="btn btn-ghost btn-circle max-[450px]:ml-[13%]">
       <div className="indicator">
       <Badge badgeContent={badgeCounter()} color="primary">
        <i style={{fontSize: "large"}} className="bi bi-cart4"></i>

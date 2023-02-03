@@ -58,7 +58,7 @@ import introMp3 from "../img/television-simpsons.mp3"
         <>
        
          <NavBar/>
-         <div className='flex justify-around mb-7'>
+         <div className='flex justify-around mb-7 mt-8'>
          <button onClick={() =>filterSeason(1)}><strong>{language == true? "Season 1": "Temporada 1"}</strong></button>
          <h1 className='hover:cursor-pointer' onClick={() =>filterSeason(2)}><strong>{language == true? "Season 2": "Temporada 2"}</strong></h1>
          <strong onClick={() =>filterSeason(3)}><h1 className='hover:cursor-pointer'>{language == true? "Season 3": "Temporada 3"}</h1></strong>

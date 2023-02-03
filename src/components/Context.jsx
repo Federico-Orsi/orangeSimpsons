@@ -104,6 +104,7 @@ setCart([...cart])
   
   setCart([])
   setMjeEmptyCart("")
+  setMjeCartVacio("")
 }
 
 

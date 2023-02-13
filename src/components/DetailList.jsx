@@ -5,6 +5,7 @@ import { ContextApp } from './Context';
 import NavBar from './NavBar';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import homerEnojado from "../img/Simpsons/homeroEnojado.jpg"
 
 
 
@@ -15,7 +16,7 @@ import axios from 'axios';
 const DetailList = () => {
     
   const [findData, setFindData] = useState({});
-  const {counter, setCounter, addToCart, cart, setMjeEmptyCart, setMjeCartVacio, language} = useContext(ContextApp);  
+  const {counter, setCounter, addToCart, cart, setMjeEmptyCart, setMjeCartVacio, language, setImgCartVacio} = useContext(ContextApp);  
     
   const { idSimpson } = useParams ();     
     
@@ -87,6 +88,7 @@ const DetailList = () => {
 
        setMjeEmptyCart('Come on Flanderrrssssssss Confirm the Order!! ');
        setMjeCartVacio('Ya haz la maldita compra Flanderrrssssssss!! ');
+       setImgCartVacio(homerEnojado);
        
        setCounter(0);
 

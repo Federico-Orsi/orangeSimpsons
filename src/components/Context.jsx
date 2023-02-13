@@ -3,6 +3,8 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import apuGif from "../img/Simpsons/apuCompraExitosa.gif"
+import ouchh from "../img/Simpsons/ouchhh.jpg"
 
 
 export const ContextApp = createContext();
@@ -22,7 +24,7 @@ const Context = (props) => {
     const [language, setLanguage] = useState(false);
     const [mjeEmptyCart, setMjeEmptyCart] = useState('Ouchhh!! Your Cart is Empty!!');
     const [mjeCartVacio, setMjeCartVacio] = useState('Ouchhh!! Su carrito esta vacío!!');
-    
+    const [imgCartVacio, setImgCartVacio] = useState(ouchh);
     
     
     const getData = async () => {
@@ -103,8 +105,11 @@ setCart([...cart])
 } 
   
   setCart([])
-  setMjeEmptyCart("")
-  setMjeCartVacio("")
+  setMjeEmptyCart("Thank you very much. Como back soon!!")
+  setMjeCartVacio("Muchas Gracias. Vuelva Pronto!!")
+  setImgCartVacio(apuGif);
+
+
 }
 
 
@@ -112,7 +117,7 @@ setCart([...cart])
     
     return (
         <>
-            <ContextApp.Provider value={{data, setData, mjeCartVacio, setMjeCartVacio, setMjeEmptyCart, language, setLanguage, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
+            <ContextApp.Provider value={{data, setData, imgCartVacio, setImgCartVacio, mjeCartVacio, setMjeCartVacio, setMjeEmptyCart, language, setLanguage, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
             {props.children}
 
             </ContextApp.Provider>

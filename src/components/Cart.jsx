@@ -9,11 +9,12 @@ import Footer from './Footer';
 
 
 
+
 const Cart = () => {
 
     
     
-    const {cart, deleteFromCart, vaciarCarro, mjeEmptyCart, language, mjeCartVacio} = useContext(ContextApp); 
+    const {cart, deleteFromCart, vaciarCarro, mjeEmptyCart, language, mjeCartVacio, imgCartVacio} = useContext(ContextApp); 
     
     console.log(cart);
     
@@ -75,7 +76,8 @@ const Cart = () => {
                   </div>
                 
                ) : <div className='text-center mt-8'>
-                   <p>{language == true? mjeEmptyCart : mjeCartVacio}</p>
+                   <p className='robotoStrong mb-5'>{language == true? mjeEmptyCart : mjeCartVacio}</p>
+                   <img className='m-auto' src={imgCartVacio} alt="" />
                 </div>
               
              }   

@@ -51,7 +51,7 @@ const NavBar = () => {
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
         <ul className="p-2">
-          <li><a className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</a></li>
+          <li><Link to="/Bart" className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</Link></li>
           <li><a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</a></li>
           <li><a className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</a></li>
           
@@ -70,11 +70,11 @@ const NavBar = () => {
       <li tabIndex={0} className='ml-10'>
       
         <a className='hover:text-amber-200 hover:bg-slate-400'>
-        {language == true? "Characters": "Personajes"}
+        {language == true? "Game": "Juego"}
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
         <ul className="p-2">
-          <li><a className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</a></li>
+          <li><Link to="/Bart" className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</Link></li>
           <li> <a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</a></li>
           <li><a className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</a></li>
         </ul>

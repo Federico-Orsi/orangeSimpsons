@@ -29,7 +29,76 @@
   
 }
 
+.clipPath{ 
+  /* clip-path:  polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); triangulo */  
+  /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); */
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  background-image: url(./img/Simpsons/blackTexturado.jpg);
 
+}
+
+.clipPath:hover{
+ 
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  /* clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); */
+}
+
+.clipPathIzquierda{
+ 
+  background-image: url(./img/Simpsons/blackTexturado.jpg);
+  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+
+.clipPathComenzar{
+  clip-path: circle(48.9% at 50% 50%);
+}
+
+.clipPathComenzar:hover{
+  /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  /* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
+}
+
+.ClipPathAzul{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  background-image: url(./img/Simpsons/gradienteAzulOscuro.jpg);
+  width: fit-content;
+}
+
+.ClipPathAzul1{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 66%, 72% 66%, 100% 100%, 48% 66%, 0 66%);
+  background-image: url(./img/Simpsons/gradienteAzulOscuro.jpg);
+  width: fit-content;
+}
+
+
+.ClipPathRombo{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);  
+  background-image: url(./img/Simpsons/gradienteAzulOscuro.jpg);
+
+  width: fit-content;
+}
+
+.ClipPathRomboGradiente{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);  
+  background-image: url(./img/Simpsons/gradiente1.jpg);
+  
+  width: fit-content;
+}
+
+
+
+.ClipPathPentagono{
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background-image: url(./img/Simpsons/gradienteAzulOscuro.jpg);
+  width: fit-content;
+}
+
+
+.tituloVideo{
+  clip-path: polygon(11% 54%, 36% 51%, 35% 6%, 65% 8%, 59% 50%, 86% 53%, 45% 98%);
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

@@ -25,7 +25,7 @@ const Context = (props) => {
     const [mjeEmptyCart, setMjeEmptyCart] = useState('Ouchhh!! Your Cart is Empty!!');
     const [mjeCartVacio, setMjeCartVacio] = useState('Ouchhh!! Su carrito esta vacío!!');
     const [imgCartVacio, setImgCartVacio] = useState(ouchh);
-    
+    const [validadorGame, setValidadorGame] = useState(0);
     
     const getData = async () => {
      
@@ -117,7 +117,7 @@ setCart([...cart])
     
     return (
         <>
-            <ContextApp.Provider value={{data, setData, imgCartVacio, setImgCartVacio, mjeCartVacio, setMjeCartVacio, setMjeEmptyCart, language, setLanguage, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
+            <ContextApp.Provider value={{data, setData, validadorGame, setValidadorGame,  imgCartVacio, setImgCartVacio, mjeCartVacio, setMjeCartVacio, setMjeEmptyCart, language, setLanguage, mjeEmptyCart, badgeCounter, vaciarCarro, deleteFromCart, counter, setCounter, addToCart, cart, setCart, filterData, setFilterData, getData}}>
             {props.children}
 
             </ContextApp.Provider>

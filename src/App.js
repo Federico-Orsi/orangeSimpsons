@@ -1,5 +1,6 @@
 import Home from './components/Home';
 import Contacto from './components/Contacto';
+import Bart from './components/Bart';
 import Cart from './components/Cart';
 import Movie from './components/Movie';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -20,6 +21,7 @@ function App() {
     <Routes>
        
       <Route path='/' element={<Home/>}/>
+      <Route path='/Bart' element={<Bart/>}/>
       <Route path='/Contacto' element={<Contacto/>}/>
       <Route path='/Simpsons' element={<ApiSimpsons/>}/>
       <Route path='/Cart' element={<Cart/>}/>

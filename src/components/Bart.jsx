@@ -128,8 +128,11 @@ const Bart = () => {
 
 
     const Comenzar = () =>{
-   if(iconValidator == ""){
-    Swal.fire({
+   
+        setMilHouse(milhouse)
+        
+        if(iconValidator == ""){
+      Swal.fire({
         icon: 'error',
         title: `Ups!! Debes cargar tu Nombre o Apodo primero!!`,
         
@@ -267,31 +270,31 @@ const Bart = () => {
 {validadorGame == 3 && 
             <>
             <div className='flex justify-around'>   
-            <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[291px] max-[450px]:left-[280px] ml-10' color="primary">
+            <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[337px] max-[450px]:left-[280px] ml-10' color="primary">
             <img src={palanca} className='h-[50px] w-[50px] ' alt="" srcset="" />
             </Badge>
             <h2 className='max-[450px]:h-[38%] max-[450px]:mr-[33%] max-[450px]:ml-[9%] max-[450px]:rounded-lg max-[450px]:pb-[45px] m-auto text-center  text-white ClipPathAzul1 rounded-lg p-3 pb-10' data-aos="zoom-in">Cual es la Patineta original de Bart??</h2>
             </div>
 
             {
-             iconValidator == "A" &&   <h1 className='max-[450px]:top-[775px] max-[450px]:left-[3rem] ClipPathRombo p-[17px] text-white absolute top-[447px] left-40'>{nombrePlayer}</h1>
+             iconValidator == "A" &&   <h1 className='max-[450px]:top-[825px] max-[450px]:left-[3rem] ClipPathRombo p-[17px] text-white absolute top-[447px] left-40'>{nombrePlayer}</h1>
             }
         {
-             iconValidator == "B" &&   <h1 className='max-[450px]:top-[775px] max-[450px]:left-[3rem] ClipPathRomboGradiente p-[17px] text-white absolute top-[447px] left-40 '>{nombrePlayer}</h1>
+             iconValidator == "B" &&   <h1 className='max-[450px]:top-[825px] max-[450px]:left-[3rem] ClipPathRomboGradiente p-[17px] text-white absolute top-[447px] left-40 '>{nombrePlayer}</h1>
         }
 
         {
-            iconValidator == "C" &&     <h1 className='max-[450px]:top-[775px] max-[450px]:left-[3rem] ClipPathRombo p-[17px]  text-yellow-300 absolute top-[447px] left-40'>{nombrePlayer}</h1>
+            iconValidator == "C" &&     <h1 className='max-[450px]:top-[825px] max-[450px]:left-[3rem] ClipPathRombo p-[17px]  text-yellow-300 absolute top-[447px] left-40'>{nombrePlayer}</h1>
         }
 
             <div className='flex justify-around mt-8'>
-                <img className='max-[450px]:h-[125px] hover:cursor-pointer' src={patineta1} onClick={Fail} alt="" />
-                <img className='max-[450px]:h-[125px] max-[450px]:mr-[3%] hover:cursor-pointer' src={bart} onClick={SuccesBart} alt="" />
-                <img className='max-[450px]:h-[125px] max-[450px]:mr-[4%] hover:cursor-pointer' src={patineta2} onClick={Fail} alt="" />
+                <img className='max-[450px]:h-[140px] hover:cursor-pointer' src={patineta1} onClick={Fail} alt="" />
+                <img className='max-[450px]:h-[140px] max-[450px]:mr-[4%] hover:cursor-pointer' src={bart} onClick={SuccesBart} alt="" />
+                <img className='max-[450px]:h-[140px] max-[450px]:mr-[4%] hover:cursor-pointer' src={patineta2} onClick={Fail} alt="" />
             </div>
             
             <div className='text-center mt-3'>
-            <button className='max-[450px]:mt-5 m-auto mt-4  bg-red-600 text-white rounded-full p-3 hover:px-6' onClick={Finalizar}>Finalizar</button>
+            <button className='max-[450px]:mt-8 m-auto mt-4  bg-red-600 text-white rounded-full p-3 hover:px-6' onClick={Finalizar}>Finalizar</button>
             </div>
 </>}
             </article>

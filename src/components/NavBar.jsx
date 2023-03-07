@@ -52,8 +52,8 @@ const NavBar = () => {
         </a>
         <ul className="p-2">
           <li><Link to="/Bart" className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</Link></li>
-          <li><a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</a></li>
-          <li><a className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</a></li>
+          <li><Link to="/Lisa"  className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</Link></li>
+          <li><Link to="/Moe" className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</Link></li>
           
         </ul>
       </li>
@@ -75,8 +75,8 @@ const NavBar = () => {
         </a>
         <ul className="p-2">
           <li><Link to="/Bart" className='ml-2 mb-1 text-white bg-orange-800 hover:text-orange-400'>Bart</Link></li>
-          <li> <a className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</a></li>
-          <li><a className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</a></li>
+          <li> <Link to="/Lisa" className='text-white mb-1 ml-2 bg-orange-800 hover:bg-gray-700 hover:text-orange-500'>Lisa</Link></li>
+          <li><Link to="/Moe" className='ml-2 text-white bg-orange-800  hover:bg-slate-500 hover:text-orange-500'>Moe</Link></li>
         </ul>
       </li>
       

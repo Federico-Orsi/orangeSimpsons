@@ -184,7 +184,7 @@ const Bart = () => {
           {/* The button to open modal */}
           { iconValidator == "" &&
              <div className='flex justify-center text-center m-auto mt-7'>
-            <label htmlFor="my-modal" className='max-[450px]:mt-16 hover:cursor-pointer mt-7'><img className='h-[100px] w-[100px] ' src={target}  alt="" srcset="" /></label>
+            <label htmlFor="my-modal" className='max-[450px]:mt-16 hover:cursor-pointer mt-7'><img className='h-[100px] w-[100px] ' src={target}  alt=""  /></label>
             <h1 className='max-[450px]:w-[60vw] max-[450px]:ml-7  mt-7 ml-10 text-yellow-300 py-10 pr-16 pl-32 w-[30%] clipPathIzquierda'   data-aos="fade-up-left" data-aos-duration="1500"  >Introduce aquí tus datos!!</h1>
             </div>
 }
@@ -209,7 +209,7 @@ const Bart = () => {
 
             <div className='flex justify-around relative'>   
             <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[275px] max-[450px]:left-[280px]  ml-10' color="primary">
-            <img src={palanca} className='h-[50px] w-[50px] ' alt="" srcset="" />
+            <img src={palanca} className='h-[50px] w-[50px] ' alt=""  />
             </Badge>
             
             <h2 className='max-[450px]:h-[38%] max-[450px]:mr-[33%] max-[450px]:ml-[9%] max-[450px]:rounded-lg max-[450px]:pb-[44px] m-auto text-center text-white ClipPathAzul1 p-3 pb-10' data-aos="zoom-in">Quien es el mejor amigo de Bart??</h2>
@@ -240,7 +240,7 @@ const Bart = () => {
             <>
             <div className='flex justify-around'>   
             <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[275px] max-[450px]:left-[280px] ml-10' color="primary">
-            <img src={palanca} className='h-[50px] w-[50px] ' alt="" srcset="" />
+            <img src={palanca} className='h-[50px] w-[50px] ' alt=""  />
             </Badge>
             <h2 className='max-[450px]:h-[38%] max-[450px]:mr-[33%] max-[450px]:ml-[9%] max-[450px]:rounded-lg max-[450px]:pb-[44px] m-auto text-center text-white ClipPathAzul rounded-md p-3 pb-6' data-aos="zoom-in-up">Quien es el ídolo de Bart??</h2>
             </div> 
@@ -271,7 +271,7 @@ const Bart = () => {
             <>
             <div className='flex justify-around'>   
             <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[337px] max-[450px]:left-[280px] ml-10' color="primary">
-            <img src={palanca} className='h-[50px] w-[50px] ' alt="" srcset="" />
+            <img src={palanca} className='h-[50px] w-[50px] ' alt=""  />
             </Badge>
             <h2 className='max-[450px]:h-[38%] max-[450px]:mr-[33%] max-[450px]:ml-[9%] max-[450px]:rounded-lg max-[450px]:pb-[45px] m-auto text-center  text-white ClipPathAzul1 rounded-lg p-3 pb-10' data-aos="zoom-in">Cual es la Patineta original de Bart??</h2>
             </div>
@@ -305,8 +305,8 @@ const Bart = () => {
             
             
             <h1 className='text-center mt-14'>Mientras juegas, aquí debajo puedes ver un resumen de algunos momentos divertidos de Bart...</h1>
-             <img src={gradiente} className='m-auto tituloVideo mt-10 mb-4' alt="" srcset="" />
-            <iframe className='mt-14 mb-8 m-auto max-[450px]:w-[80vw]' width="560" height="315" src="https://www.youtube.com/embed/TfoCHgYZ9Vk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             <img src={gradiente} className='m-auto tituloVideo mt-10 mb-4' alt=""  />
+            <iframe className='mt-14 mb-8 m-auto max-[450px]:w-[80vw]' width="560" height="315" src="https://www.youtube.com/embed/TfoCHgYZ9Vk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             
             
             <Footer/>

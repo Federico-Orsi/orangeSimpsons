@@ -31,7 +31,7 @@ const Lisa = () => {
   }, [])
 
 
-    const {validadorGame, setValidadorGame} = useContext(ContextApp);  
+    const {validadorGame, setValidadorGame, language} = useContext(ContextApp);  
     
 
     const SuccesSaxo = () =>{
@@ -202,7 +202,7 @@ const Lisa = () => {
             </div>
             
             <div className='text-center mt-7'>
-            <button className='m-auto mt-4 bg-green-400 text-white rounded-full p-3 hover:px-6' onClick={Siguiente}>Siguiente</button>
+            <button className='m-auto mt-4 bg-green-400 text-white rounded-full p-3 hover:px-6' onClick={Siguiente}>{language == true? "Next": "Siguiente"}</button>
             </div>
             </>
 }
@@ -234,7 +234,7 @@ const Lisa = () => {
             </div>
             
             <div className='text-center mt-7'>
-            <button className='m-auto mt-4 bg-green-400 text-white rounded-full p-3 hover:px-6' onClick={Siguiente}>Siguiente</button>
+            <button className='m-auto mt-4 bg-green-400 text-white rounded-full p-3 hover:px-6' onClick={Siguiente}>{language == true? "Next": "Siguiente"}</button>
             </div>
 </>}
 {validadorGame == 3 && 

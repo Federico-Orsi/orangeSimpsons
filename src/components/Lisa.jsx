@@ -197,8 +197,8 @@ const Lisa = () => {
 
             <div  className='flex justify-around mt-8'>
                 <img className='max-[450px]:h-[100px] max-[450px]:w-[26%] hover:cursor-pointer rounded-[1.5rem]' src={violin2} onClick={Fail} alt="" />
-                <img className='max-[450px]:h-[100px] max-[450px]:mr-[6%] hover:cursor-pointer' src={saxo} onClick={SuccesSaxo} alt="" />
-                <img className='max-[450px]:h-[100px] max-[450px]:mr-[5%] hover:cursor-pointer' src={guitarra} onClick={Fail} alt="" />
+                <img className='max-[450px]:h-[100px] max-[450px]:ml-2 hover:cursor-pointer' src={saxo} onClick={SuccesSaxo} alt="" />
+                <img className='max-[450px]:h-[100px] max-[450px]:mr-[3%] hover:cursor-pointer' src={guitarra} onClick={Fail} alt="" />
             </div>
             
             <div className='text-center mt-7'>
@@ -209,27 +209,27 @@ const Lisa = () => {
             {validadorGame == 2 && 
             <>
             <div className='flex justify-around'>   
-            <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[286px] max-[450px]:left-[280px] ml-10' color="primary">
+            <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[300px] max-[450px]:left-[280px] ml-10' color="primary">
             <img src={palanca} className='h-[50px] w-[50px] ' alt=""  />
             </Badge>
             <h2 className='max-[450px]:h-[38%] max-[450px]:mr-[33%] max-[450px]:ml-[9%] max-[450px]:rounded-lg max-[450px]:pb-[44px] m-auto text-center text-white ClipPathAzul rounded-md p-3 pb-6' data-aos="zoom-in-up">Quien es la Maestra de Lisa??</h2>
             </div> 
 
             {
-             iconValidator == "A" &&   <h1 className='max-[450px]:top-[771px] max-[450px]:left-[2rem] ClipPathRombo p-[17px] text-white absolute top-[447px] left-40'>{nombrePlayer}</h1>
+             iconValidator == "A" &&   <h1 className='max-[450px]:top-[786px] max-[450px]:left-[2rem] ClipPathRombo p-[17px] text-white absolute top-[447px] left-40'>{nombrePlayer}</h1>
             }
         {
-             iconValidator == "B" &&   <h1 className='max-[450px]:top-[771px] max-[450px]:left-[2rem] ClipPathRomboGradiente p-[17px] text-white absolute top-[447px] left-40 '>{nombrePlayer}</h1>
+             iconValidator == "B" &&   <h1 className='max-[450px]:top-[786px] max-[450px]:left-[2rem] ClipPathRomboGradiente p-[17px] text-white absolute top-[447px] left-40 '>{nombrePlayer}</h1>
         }
 
         {
-            iconValidator == "C" &&     <h1 className='max-[450px]:top-[771px] max-[450px]:left-[2rem] ClipPathRombo p-[17px]  text-yellow-300 absolute top-[447px] left-40'>{nombrePlayer}</h1>
+            iconValidator == "C" &&     <h1 className='max-[450px]:top-[786px] max-[450px]:left-[2rem] ClipPathRombo p-[17px]  text-yellow-300 absolute top-[447px] left-40'>{nombrePlayer}</h1>
         }
             
        
             <div className='flex justify-around mt-8'>
                 <img className='max-[450px]:h-[100px] max-[450px]:ml-[3%] hover:cursor-pointer' src={edna} onClick={Fail} alt="" />
-                <img className='max-[450px]:h-[110px] max-[450px]:w-[122px]  max-[450px]:ml-[1%] hover:cursor-pointer' src={mujerFlanders} onClick={Fail} alt="" />
+                <img className='max-[450px]:h-[110px] max-[450px]:w-[122px]  max-[450px]:mr-[4%] hover:cursor-pointer' src={mujerFlanders} onClick={Fail} alt="" />
                 <img className='max-[450px]:h-[100px] max-[450px]:w-[22%] hover:cursor-pointer rounded-[1.5rem]' src={teacher} onClick={SuccesTeacher} alt="" />
             </div>
             

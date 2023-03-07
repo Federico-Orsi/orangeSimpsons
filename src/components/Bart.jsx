@@ -161,7 +161,7 @@ const Bart = () => {
           {/* The button to open modal */}
           { iconValidator == "" &&
              <div className='flex justify-center text-center m-auto mt-7'>
-            <label htmlFor="my-modal" className='max-[450px]:mt-14 hover:cursor-pointer mt-7'><img className='h-[100px] w-[100px] ' src={target}  alt="" srcset="" /></label>
+            <label htmlFor="my-modal" className='max-[450px]:mt-16 hover:cursor-pointer mt-7'><img className='h-[100px] w-[100px] ' src={target}  alt="" srcset="" /></label>
             <h1 className='max-[450px]:w-[60vw] max-[450px]:ml-7  mt-7 ml-10 text-yellow-300 py-10 pr-16 pl-32 w-[30%] clipPathIzquierda'   data-aos="fade-up-left" data-aos-duration="1500"  >Introduce aquí tus datos!!</h1>
             </div>
 }

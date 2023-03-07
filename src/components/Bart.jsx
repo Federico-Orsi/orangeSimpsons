@@ -161,7 +161,7 @@ const Bart = () => {
           {/* The button to open modal */}
           { iconValidator == "" &&
              <div className='flex justify-center text-center m-auto mt-7'>
-            <label htmlFor="my-modal" className='max-[450px]:mt-12 hover:cursor-pointer mt-7'><img className='h-[100px] w-[100px] ' src={target}  alt="" srcset="" /></label>
+            <label htmlFor="my-modal" className='max-[450px]:mt-14 hover:cursor-pointer mt-7'><img className='h-[100px] w-[100px] ' src={target}  alt="" srcset="" /></label>
             <h1 className='max-[450px]:w-[60vw] max-[450px]:ml-7  mt-7 ml-10 text-yellow-300 py-10 pr-16 pl-32 w-[30%] clipPathIzquierda'   data-aos="fade-up-left" data-aos-duration="1500"  >Introduce aquí tus datos!!</h1>
             </div>
 }
@@ -185,27 +185,27 @@ const Bart = () => {
                 <>
 
             <div className='flex justify-around relative'>   
-            <Badge badgeContent={badgeCounter} className=' ml-10' color="primary">
+            <Badge badgeContent={badgeCounter} className='max-[450px]:absolute max-[450px]:top-[275px] max-[450px]:left-[280px]  ml-10' color="primary">
             <img src={palanca} className='h-[50px] w-[50px] ' alt="" srcset="" />
             </Badge>
             
-            <h2 className='max-[450px]:h-[38%] m-auto text-center text-white ClipPathAzul1 p-3 pb-10' data-aos="zoom-in">Quien es el mejor amigo de Bart??</h2>
+            <h2 className='max-[450px]:h-[38%] max-[450px]:mr-[33%] max-[450px]:ml-[9%] max-[450px]:rounded-lg max-[450px]:pb-[44px] m-auto text-center text-white ClipPathAzul1 p-3 pb-10' data-aos="zoom-in">Quien es el mejor amigo de Bart??</h2>
             </div> 
             {
-             iconValidator == "A" &&   <h1 className='max-[450px]:top-[733px] max-[450px]:left-[2rem] ClipPathRombo p-[17px] text-white absolute top-[447px] left-40'>{nombrePlayer}</h1>
+             iconValidator == "A" &&   <h1 className='max-[450px]:top-[761px] max-[450px]:left-[2rem] ClipPathRombo p-[17px] text-white absolute top-[447px] left-40'>{nombrePlayer}</h1>
             }
         {
-             iconValidator == "B" &&   <h1 className='max-[450px]:top-[733px] max-[450px]:left-[2rem] ClipPathRomboGradiente p-[17px] text-white absolute top-[447px] left-40 '>{nombrePlayer}</h1>
+             iconValidator == "B" &&   <h1 className='max-[450px]:top-[761px] max-[450px]:left-[2rem] ClipPathRomboGradiente p-[17px] text-white absolute top-[447px] left-40 '>{nombrePlayer}</h1>
         }
 
         {
-            iconValidator == "C" &&     <h1 className='max-[450px]:top-[733px] max-[450px]:left-[2rem] ClipPathRombo p-[17px]  text-yellow-300 absolute top-[447px] left-40'>{nombrePlayer}</h1>
+            iconValidator == "C" &&     <h1 className='max-[450px]:top-[761px] max-[450px]:left-[2rem] ClipPathRombo p-[17px]  text-yellow-300 absolute top-[447px] left-40'>{nombrePlayer}</h1>
         }
 
             <div  className='flex justify-around mt-8'>
-                <img className='max-[450px]:h-[100px] hover:cursor-pointer rounded-[1.5rem]' src={milHouse} onClick={SuccesMilhouse} alt="" />
-                <img className='max-[450px]:h-[100px] hover:cursor-pointer' src={nelson} onClick={Fail} alt="" />
-                <img className='max-[450px]:h-[100px] hover:cursor-pointer' src={rafaNariz} onClick={Fail} alt="" />
+                <img className='max-[450px]:h-[100px] max-[450px]:w-[26%] hover:cursor-pointer rounded-[1.5rem]' src={milHouse} onClick={SuccesMilhouse} alt="" />
+                <img className='max-[450px]:h-[100px] max-[450px]:mr-[6%] hover:cursor-pointer' src={nelson} onClick={Fail} alt="" />
+                <img className='max-[450px]:h-[100px] max-[450px]:mr-[5%] hover:cursor-pointer' src={rafaNariz} onClick={Fail} alt="" />
             </div>
             
             <div className='text-center mt-7'>
@@ -293,11 +293,11 @@ const Bart = () => {
 
             {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal" className="modal-toggle" />
-            <div className="modal">
-            <div className="modal-box">
+            <div className="max-[450px]:w-[86%] modal">
+            <div className=" modal-box">
                 <h3 className="font-bold text-lg">Bienvenido, introduce tu Nombre y elige tu ícono!!!</h3>
                 <input  type="text" placeholder="Nombre"  required onChange={e=>{setNombrePlayer(e.target.value)}} className="bg-white text-center input input-bordered input-sm w-full max-w-xs mt-10" />
-                <div className='mt-3 flex justify-around w-[70%]'>
+                <div className='mt-3 flex justify-around w-[90%]'>
                 <h1 className='ClipPathRombo p-[17px] text-white hover:cursor-pointer' onClick={()=>{setIconValidator("A")}}>{nombrePlayer}</h1>
                 <h1 htmlFor="my-modal" className='ClipPathRomboGradiente p-[17px] text-white hover:cursor-pointer' onClick={()=>{setIconValidator("B")}}>{nombrePlayer}</h1>
                 <h1 className='ClipPathRombo p-[17px]  text-yellow-300 hover:cursor-pointer' onClick={()=>{setIconValidator("C")}}>{nombrePlayer}</h1>

@@ -33,9 +33,16 @@ const Bart = () => {
 
     const {validadorGame, setValidadorGame, language} = useContext(ContextApp);  
     
+    const [milHouse, setMilHouse] = useState(milhouse);
+    const [krosti, setKrosti] = useState(badKrosti);
+    const [bart, setBart] = useState(patinetaBart);
+    const [badgeCounter, setBadgeCounter] = useState(0);
+    const [nombrePlayer, setNombrePlayer] = useState("");
+    const [iconValidator, setIconValidator] = useState("");
 
     const SuccesMilhouse = () =>{
 
+       if (milHouse == milhouse) {
         setMilHouse(milhouseWinner);
         setBadgeCounter(badgeCounter + 1)
         
@@ -53,9 +60,12 @@ const Bart = () => {
                 
               })
         }  
-    }  
+    } 
+} 
 
       const SuccesKrosti = () =>{
+
+        if (krosti == badKrosti) {
 
         setKrosti(krostiAlegre);
         setBadgeCounter(badgeCounter + 1)
@@ -75,9 +85,11 @@ const Bart = () => {
 
         }
     }  
-
+}
       const SuccesBart = () =>{
 
+        if (bart == patinetaBart) {
+        
         setBart(BartConPatineta);
         setBadgeCounter(badgeCounter + 1)
         
@@ -96,7 +108,7 @@ const Bart = () => {
           })
       }  
     }
-        
+}      
       const Fail = () =>{
     
         setBadgeCounter(badgeCounter - 1)
@@ -181,12 +193,7 @@ const Bart = () => {
 
       
     
-    const [milHouse, setMilHouse] = useState(milhouse);
-    const [krosti, setKrosti] = useState(badKrosti);
-    const [bart, setBart] = useState(patinetaBart);
-    const [badgeCounter, setBadgeCounter] = useState(0);
-    const [nombrePlayer, setNombrePlayer] = useState("");
-    const [iconValidator, setIconValidator] = useState("");
+    
   
    
    
@@ -282,7 +289,7 @@ const Bart = () => {
             { language == false?
             <button className='max-[450px]:rounded-full max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px]  ml-14 mt-7 mr-28 mr bg-green-400 text-white p-4 clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
             data-aos-offset="100"data-aos-easing="ease-in-sine" data-aos-duration="3000">Comenzar</button>
-          :  <button className='max-[450px]:rounded-full max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px] max-[450px]:p-[2rem]   ml-14 mt-7 mr-28 mr bg-green-400 text-white p-4 clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
+          :  <button className='max-[450px]:rounded-full max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px] max-[450px]:p-[2rem]   ml-14 mt-7 mr-28 mr bg-green-400 text-white p-[49px] clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
           data-aos-offset="100"data-aos-easing="ease-in-sine" data-aos-duration="3000">Play</button>
         }  
             </div>
@@ -392,7 +399,7 @@ const Bart = () => {
          
             
             
-            <h1 className='text-center mt-14 p-6'>{language == true? "Meanwhile you play, here below you can see some Bart's funny moments": "Mientras juegas, aquí debajo puedes ver un resumen de algunos momentos divertidos de Bart..."}</h1>
+            <h1 className='text-center mt-14 p-5'>{language == true? "Meanwhile you play, here below you can see some Bart's funny moments": "Mientras juegas, aquí debajo puedes ver un resumen de algunos momentos divertidos de Bart..."}</h1>
              <img src={gradiente} className='m-auto tituloVideo mt-10 mb-4' alt=""  />
             <iframe className='mt-14 mb-8 m-auto max-[450px]:w-[80vw]' width="560" height="315" src="https://www.youtube.com/embed/TfoCHgYZ9Vk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             

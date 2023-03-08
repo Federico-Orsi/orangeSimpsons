@@ -50,7 +50,7 @@ const Home = () => {
     <audio src={introMp3} controls className='w-[28%] m-auto mt-10' ></audio>
     
     
-    <div className='flex justify-around mt-10 mr-20'> 
+    <div className='flex justify-around mt-10 mr-10'> 
     <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"78px" , width:"48px"}} alt="" /></Link>
     <div className='mt-[2.5rem]'> 
     <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>
@@ -69,19 +69,19 @@ const Home = () => {
     
     
     <div className='max-[450px]:flex-col max-[450px]:ml-3 max-[450px]:gap-3  max-[450px]:m-auto flex justify-around mt-7 '>
-     <img src={SimpFamily} className="w-96 h-96" />
-     <img src={allCharacters} className="w-96 h-96"/>
-     <img src={MoeTabern} className="max-[450px]:mb-3 w-96 h-96"/>
+     <img src={SimpFamily} className="md:w-[14rem] lg:w-[20rem]" />
+     <img src={allCharacters} className="md:w-[14rem] lg:w-[20rem]"/>
+     <img src={MoeTabern} className="max-[450px]:mb-3 md:w-[14rem] lg:w-[20rem]"/>
      </div>
     <div className='max-[450px]:justify-around max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-evenly mt-7'>
-     <img src={MrBurns} className="inline-block w-96 h-96"/>
-     <img src={barnyLeniCarl} className="inline-block w-96 h-96"/>
-     <img src={Apu} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
+     <img src={MrBurns} className="inline-block md:w-[14rem] lg:w-[20rem]"/>
+     <img src={barnyLeniCarl} className="inline-block md:w-[14rem] lg:w-[20rem]"/>
+     <img src={Apu} className="max-[450px]:mb-3 inline-block md:w-[14rem] lg:w-[20rem] h-96"/>
      </div>
      <div className='max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-around mt-7'>
-     <img src={Moe} className="inline-block w-96 h-96"/>
-     <img src={BenderMoes} className="inline-block w-96 h-96"/>
-     <img src={ComicNerd} className="max-[450px]:mb-3 inline-block w-96 h-96"/>
+     <img src={Moe} className="inline-block md:w-[14rem] lg:w-[20rem] h-96"/>
+     <img src={BenderMoes} className="inline-block md:w-[14rem] lg:w-[20rem] h-96"/>
+     <img src={ComicNerd} className="max-[450px]:mb-3 inline-block md:w-[14rem] lg:w-[20rem] h-96"/>
      </div>
      {/* <div className='max-[450px]:justify-around max-[450px]:flex-col max-[450px]:m-auto max-[450px]:ml-2 max-[450px]:gap-3 flex justify-evenly mt-7'>
      <img src={img10} className="inline-block w-96 h-96"/>

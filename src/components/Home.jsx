@@ -50,9 +50,9 @@ const Home = () => {
     <audio src={introMp3} controls className='w-[28%] m-auto mt-10' ></audio>
     
     
-    <div className='flex justify-between mt-10 mr-20'> 
-    <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"65px" , width:"45px"}} alt="" /></Link>
-    <div className='mt-6'>
+    <div className='flex justify-around mt-10 mr-20'> 
+    <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"78px" , width:"48px"}} alt="" /></Link>
+    <div className='mt-[2.5rem]'> 
     <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>
     </div>
     </div>

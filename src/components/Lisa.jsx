@@ -229,9 +229,9 @@ const Lisa = () => {
             
             <h1 className='max-[450px]:w-[57vw] max-[450px]:pr-[7rem] max-[450px]:pl-[2.75rem] mt-7 ml-48 text-yellow-300 py-10 pr-16 pl-7 clipPath'   data-aos="fade-up-right" data-aos-duration="3000"  >{language == true? "Let's see how much you know about the Simpsons!!": "Veamos cuanto sabes de los Simpsons!!"}</h1>
            { language == false?
-            <button className='max-[450px]:rounded-full max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px]  ml-14 mt-7 mr-28 mr bg-green-400 text-white p-4 clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
+            <button className='max-[450px]:rounded-full max-[450px]:p-4 max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px] md:p-[4rem] min-[898px]:p-4 ml-14 mt-7 mr-28 mr bg-green-400 text-white p-4 clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
             data-aos-offset="100"data-aos-easing="ease-in-sine" data-aos-duration="3000">Comenzar</button>
-          : <button className='max-[450px]:rounded-full max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px] max-[450px]:p-[2rem]   ml-14 mt-7 mr-28 mr bg-green-400 text-white p-[49px] clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
+          : <button className='max-[450px]:rounded-full max-[450px]:w-[38%] max-[450px]:h-[100px] max-[450px]:m-7 max-[450px]:mt-[75px] max-[450px]:p-[2rem] md:p-[83px] lg:p-12  ml-14 mt-7 mr-28 mr bg-green-400 text-white  clipPathComenzar' onClick={Comenzar} data-aos="fade-left"
           data-aos-offset="100"data-aos-easing="ease-in-sine" data-aos-duration="3000">Play</button>
         } 
             </div>

@@ -88,14 +88,14 @@ const NavBar = () => {
   </div>
   
 
-  <Link to="/" className="normal-case text-xl text-center hover:bg-white hover:cursor-pointer"><img className=' hover:bg-white w-80' src={introGif} alt="" /></Link>
+  <Link to="/" className="normal-case text-xl text-center hover:bg-white hover:cursor-pointer md:mr-[3%] min-[1200px]:mr-0"><img className=' hover:bg-white w-80' src={introGif} alt="" /></Link>
   {/* navbar End */}
 
   
   
   <div className="navbar-end">
   
-  <div className="max-[450px]:relative hidden md:flex mr-20">
+  <div className="max-[450px]:relative hidden md:flex  mr-20">
   <img onClick={changeToUsa} className='max-[450px]:absolute hover:cursor-pointer h-[43px] mt-1 mr-8' src={USA} alt="" />
   <img onClick={changeToSpain} className='max-[450px]:absolute hover:cursor-pointer h-[51px] mr-8' src={spain} alt="" />
     <ul className="menu menu-horizontal px-1">

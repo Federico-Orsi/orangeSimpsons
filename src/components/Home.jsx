@@ -19,6 +19,7 @@ import Footer from '../components/Footer';
 import homerImg from "../img/homer-img.png"
 import { Link } from 'react-router-dom';
 import FedeCV from "../img/CV FedericoOrsi_english.pdf"
+import FedeCVEspañol from "../img/CV FedericoOrsi-Español.pdf"
 import introMp3 from "../img/television-simpsons.mp3"
 import allCharacters from "../img/simpsonsAllCharacters.jpeg"
 import SimpFamily from "../img/Simpsons/SimpsonsFamily.jpg"
@@ -53,7 +54,10 @@ const Home = () => {
     <div className='flex justify-around mt-10 mr-10'> 
     <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"78px" , width:"48px"}} alt="" /></Link>
     <div className='mt-[2.5rem]'> 
+    { language == true?
     <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>
+    : <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCVEspañol} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>     
+} 
     </div>
     </div>
     <div className='p-14'>

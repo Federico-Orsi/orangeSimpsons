@@ -36,7 +36,6 @@ const Home = () => {
     
     <div className='flex justify-around mt-10 mr-10'> 
     <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"78px" , width:"48px"}} alt="" /></Link>
-    <p>Heyyyy Dude!! Just testing this fuckinggg app!!</p>
     <div className='mt-[2.5rem]'> 
     { language == true?
     <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>

@@ -1,37 +1,20 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
-import img1 from "../img/ACTIVIDAD PINZAS.jpg"
-import hanniLogo from "../img/hanniLogo.gif"
-import img3 from "../img/BOLSA CARONELLA.jpg"
-import img4 from "../img/BOLSA LA BICI.jpg"
-import img5 from "../img/BOLSAS HANI 2.jpg"
-import img6 from "../img/CARATULA-1--MOCK.jpg"
-import img7 from "../img/CARATULA-1--MOCK.jpg"
-import img8 from "../img/COFFE LA BICI.jpg"
-import img9 from "../img/DIPLOMA-1-MOCK.jpg"
-import img10 from "../img/DIPLOMA-2-MOCK.jpg"
-import img11 from "../img/DIPTICOS ACON 2.jpg"
-import img12 from "../img/DIPTICOS ACON 3.jpg"
-import img13 from "../img/DIPTICOS ACON 4.jpg"
-import img14 from "../img/DIPTICOS ACON.jpg"
-import img15 from "../img/EBOOK TAPA.jpg"
-import Footer from '../components/Footer';
-import homerImg from "../img/homer-img.png"
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import FedeCV from "../img/CV FedericoOrsi_english.pdf"
-import FedeCVEspañol from "../img/CV FedericoOrsi-Español.pdf"
-import introMp3 from "../img/television-simpsons.mp3"
-import allCharacters from "../img/simpsonsAllCharacters.jpeg"
-import SimpFamily from "../img/Simpsons/SimpsonsFamily.jpg"
-import MoeTabern from "../img/Simpsons/MoesTabern.jpg"
-import MrBurns from "../img/Simpsons/MrBurns.png"
-import Moe from "../img/Simpsons/Moe.jpg"
-import Tony from "../img/Simpsons/TonyElGordo.jpg"
-import barnyLeniCarl from "../img/Simpsons/barnyLeniCarl.jpg"
-import Apu from "../img/Simpsons/Apu.png"
-import ComicNerd from "../img/Simpsons/comicsNerd.jpg"
-import BenderMoes from "../img/Simpsons/BenderMoes.jpg"
-import { useContext } from "react";
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
+import FedeCVEspañol from "../img/CV FedericoOrsi-Español.pdf";
+import FedeCV from "../img/CV FedericoOrsi_english.pdf";
+import Apu from "../img/Simpsons/Apu.png";
+import BenderMoes from "../img/Simpsons/BenderMoes.jpg";
+import Moe from "../img/Simpsons/Moe.jpg";
+import MoeTabern from "../img/Simpsons/MoesTabern.jpg";
+import MrBurns from "../img/Simpsons/MrBurns.png";
+import SimpFamily from "../img/Simpsons/SimpsonsFamily.jpg";
+import barnyLeniCarl from "../img/Simpsons/barnyLeniCarl.jpg";
+import ComicNerd from "../img/Simpsons/comicsNerd.jpg";
+import homerImg from "../img/homer-img.png";
+import allCharacters from "../img/simpsonsAllCharacters.jpeg";
+import introMp3 from "../img/television-simpsons.mp3";
 import { ContextApp } from './Context';
 
 
@@ -53,6 +36,7 @@ const Home = () => {
     
     <div className='flex justify-around mt-10 mr-10'> 
     <Link to="/Simpsons"><img src={homerImg} className='inline ml-10  mt-3 hover:cursor-pointer' style={{height:"78px" , width:"48px"}} alt="" /></Link>
+    <p>Heyyyy Dude!! Just testing this fuckinggg app!!</p>
     <div className='mt-[2.5rem]'> 
     { language == true?
     <a className='bg-black text-white rounded-full p-4 hover:text-yellow-300' href={FedeCV} download={""}>{language == true? "Developer CV": "CV del Desarrollador"}</a>
